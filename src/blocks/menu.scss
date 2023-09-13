@@ -1,0 +1,44 @@
+.menu {
+  height: 100vh;
+  overflow: auto;
+
+  background-color: #ececec;
+
+  &__content {
+    position: sticky; /* to keep cross always visible */
+    top: 0;
+    z-index: 1;
+  }
+
+  &__phone {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+  }
+
+  &__call {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+
+    border-bottom: 1px solid $main-color;
+    width: fit-content;
+  }
+
+  transform: translateX(-100%);
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+  }
+}
